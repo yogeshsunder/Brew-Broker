@@ -1,0 +1,72 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite thread-count="1" verbose="1" name="BrewBroker Suite" annotations="JDK" parallel="tests">
+   
+   <test name="VerifyAdminLogin">
+	 <classes>
+	   <class name="com.TestCases.VerifyAdminLogin"/>
+	 </classes>
+   </test>
+   
+  <test name="VerifyAdminAddBuyer">
+     <classes>
+       <class name="com.TestCases.VerifyAdminAddBuyer"/>
+     </classes>
+   </test>
+   
+    <test name="VerifyAdminAddSupplier">
+     <classes>
+       <class name="com.TestCases.VerifyAdminAddSupplier"/>
+     </classes>
+   </test>
+   
+   <test name="VerifyBuyerSignup">
+     <classes>
+       <class name="com.TestCases.VerifyBuyerSignup"/>
+     </classes>
+   </test>
+   
+   <test name="VerifyAdminEditBuyer">
+     <classes>
+       <class name="com.TestCases.VerifyAdminEditBuyer"/>
+     </classes>
+   </test>
+   
+   <test name="VerifyAdminDeleteBuyer">
+     <classes>
+       <class name="com.TestCases.VerifyAdminDeleteBuyer"/>
+     </classes>
+   </test>
+   
+   <test name="VerifyAdminEditSupplier">
+     <classes>
+       <class name="com.TestCases.VerifyAdminEditSupplier"/>
+     </classes>
+   </test>
+   
+    <test name="VerifyAdminDeleteSupplier">
+     <classes>
+       <class name="com.TestCases.VerifyAdminDeleteSupplier"/>
+     </classes>
+   </test>
+    
+   
+   <test name="VerifySupplierProfileCreation">
+     <classes>
+       <class name="com.TestCases.VerifySupplierProfileCreation"/>
+     </classes>
+   </test>
+   
+   <test name="VerifySupplierSignup">
+     <classes>
+       <class name="com.TestCases.VerifySupplierSignup"/>
+     </classes>
+   </test>
+   
+   <test name="VerifyRequestEarlyAccess">
+     <classes>
+       <class name="com.TestCases.VerifyRequestEarlyAccess"/>
+     </classes>
+   </test>
+   
+</suite>

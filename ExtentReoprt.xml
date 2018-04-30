@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+
+<suite thread-count="1" verbose="1" name="BrewBrokerExtent Suite" annotations="JDK" parallel="tests">
+          
+  <test name="VerifyAdminDeleteBuyer">
+     <classes>
+       <class name="com.TestCases.VerifyAdminDeleteBuyer"/>
+     </classes>
+   </test>
+   
+</suite>

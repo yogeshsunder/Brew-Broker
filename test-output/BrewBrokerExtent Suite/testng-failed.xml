@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [BrewBrokerExtent Suite]" parallel="tests">
+  <test name="VerifyBuyerSignup(failed)" parallel="tests">
+    <classes>
+      <class name="com.TestCases.VerifyBuyerSignup">
+        <methods>
+          <include name="verifybuyerSignup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.TestCases.VerifyBuyerSignup -->
+    </classes>
+  </test> <!-- VerifyBuyerSignup(failed) -->
+</suite> <!-- Failed suite [BrewBrokerExtent Suite] -->

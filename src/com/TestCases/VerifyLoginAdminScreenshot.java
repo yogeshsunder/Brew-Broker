@@ -85,7 +85,7 @@ public class VerifyLoginAdminScreenshot
 
 		
 		//Enter the Password--------------------------
-		signinadmin.enterPassword("Admin@123");
+		signinadmin.enterPassword("Admin@12");
 		
 		//Click on login button-------------------------------
 		signinadmin.clickOnLogin();

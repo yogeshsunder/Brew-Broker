@@ -60,7 +60,7 @@ public class VerifyBuyerSignup {
 		signupBuyer.clickContinueDescribes();
 		signupBuyer.enterName("yogesh");
 		signupBuyer.enterBreweryName("Test");
-		signupBuyer.enterEmail("yogeshtestbuyerSignup014@mailinator.com");
+		signupBuyer.enterEmail("yogeshtestbuyerSignup001@mailinator.com");
 		signupBuyer.enterpwd("Yogesh@123");
 		Thread.sleep(2000);
 		signupBuyer.signup();

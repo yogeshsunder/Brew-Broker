@@ -50,11 +50,9 @@ WebDriver driver;
 		Thread.sleep(2000);
 		
 		signup.clickonSupplierSignup();
-		logger.log(LogStatus.INFO, "User is able to click on Supplier SignUp button.");
+		logger.log(LogStatus.INFO, "User is able to click on Supplier SignUp button."); 
 		
 		Thread.sleep(2000);
-		signup.email("yogeshTestSupplierSignup016@mailinator.com");
-		logger.log(LogStatus.INFO, "User is able to enter Email address successfully.");
 		
 		signup.firstname("Yogesh");
 		logger.log(LogStatus.INFO, "User is able to enter First Name successfully.");
@@ -65,9 +63,16 @@ WebDriver driver;
 		signup.breweryname("Yogesh");
 		logger.log(LogStatus.INFO, "User is able to enter Brewery Name successfully.");
 		
+		Thread.sleep(2000);
+		signup.email("yogeshTestSupplierSignup005@mailinator.com");
+		logger.log(LogStatus.INFO, "User is able to enter Email address successfully.");
+		
 		signup.password("Yogesh@123");
 		logger.log(LogStatus.INFO, "User is able to enter Password successfully.");
 		
+		signup.ContractBrewingServices();
+		logger.log(LogStatus.INFO, "User is able to select Contract brewing services as services");
+				
 		signup.license();
 		logger.log(LogStatus.INFO, "User is able to select License successfully.");
 		

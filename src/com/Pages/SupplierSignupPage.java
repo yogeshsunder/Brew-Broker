@@ -116,6 +116,16 @@ public class SupplierSignupPage {
 		enterpassword.sendKeys(pwd);
 	}	
 	
+	//WebElement for click on check box "Contract brewing services" under services on Sign Up form
+		@FindBy(how=How.ID,using="service3")
+		WebElement service;
+		
+		public void ContractBrewingServices()
+		{
+			service.click();
+		}	
+	
+	
 	//WebElement for Confirm License check box on Sign Up form
 	@FindBy(how=How.ID,using="confirm")
 	WebElement confirmlicense;

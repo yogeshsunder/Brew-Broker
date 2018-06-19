@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="126376" started-at="2018-05-23T13:30:18Z" finished-at="2018-05-23T13:32:25Z">
+  <suite name="Default suite" duration-ms="109111" started-at="2018-05-31T13:33:47Z" finished-at="2018-05-31T13:35:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="126376" started-at="2018-05-23T13:30:18Z" finished-at="2018-05-23T13:32:25Z">
+    <test name="Default test" duration-ms="109111" started-at="2018-05-31T13:33:47Z" finished-at="2018-05-31T13:35:36Z">
       <class name="com.TestCases.VerifySupplierProfileCreation">
-        <test-method status="PASS" signature="verifySupplierProfileCreation()[pri:0, instance:com.TestCases.VerifySupplierProfileCreation@1bce4f0a]" name="verifySupplierProfileCreation" duration-ms="125544" started-at="2018-05-23T19:00:18Z" finished-at="2018-05-23T19:02:24Z">
+        <test-method status="PASS" signature="verifySupplierProfileCreation()[pri:0, instance:com.TestCases.VerifySupplierProfileCreation@1bce4f0a]" name="verifySupplierProfileCreation" duration-ms="108532" started-at="2018-05-31T19:03:47Z" finished-at="2018-05-31T19:05:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySupplierProfileCreation -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.TestCases.VerifySupplierProfileCreation@1bce4f0a]" name="tearDown" is-config="true" duration-ms="792" started-at="2018-05-23T19:02:24Z" finished-at="2018-05-23T19:02:25Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.TestCases.VerifySupplierProfileCreation@1bce4f0a]" name="tearDown" is-config="true" duration-ms="550" started-at="2018-05-31T19:05:35Z" finished-at="2018-05-31T19:05:36Z">
           <params>
             <param index="0">
               <value>

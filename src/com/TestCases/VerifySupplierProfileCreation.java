@@ -60,7 +60,7 @@ public class VerifySupplierProfileCreation
 		signup.firstname("Yogesh");
 		signup.lastname("Kumar");
 		signup.breweryname("Beer for All");
-		signup.email("yogeshTestsupplier065@mailinator.com");
+		signup.email("yogeshTestsupplier001@mailinator.com");
 		signup.password("Yogesh@123");
 		signup.ContractBrewingServices();
 		signup.license();

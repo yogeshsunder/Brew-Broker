@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.TestCases.VerifySupplierProfileCreation">
+      <class name="com.TestCases.VerifyBuyerSignup">
         <methods>
-          <include name="verifySupplierProfileCreation"/>
+          <include name="verifybuyerSignup"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.TestCases.VerifySupplierProfileCreation -->
+      </class> <!-- com.TestCases.VerifyBuyerSignup -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

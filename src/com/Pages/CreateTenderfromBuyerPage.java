@@ -39,7 +39,7 @@ WebDriver driver;
 		newtender.click();
 	}
 	
-	//--------------------------------Step1 of Tender Flow-----------------------------------------------------------
+	//--------------------------------Step1 of Tender Flow(Basic information)-----------------------------------------------------------
 	
 	//Click on Both brewing & packaging services in services------------------------------
 	@FindBy(how=How.ID,using="service3")
@@ -113,7 +113,7 @@ WebDriver driver;
 		continuestep1.click();
 	}
 	
-	//--------------------------------Step2 of Tender Flow-----------------------------------------------------------
+	//--------------------------------Step2 of Tender Flow(Brewing criteria)-----------------------------------------------------------
 	
 	//Click on Contract brewing from a recipe in Services----------------------------------------------
 	@FindBy(how=How.ID,using="Brewingservices1")
@@ -160,10 +160,79 @@ WebDriver driver;
 			continuestep2.click();
 		}
 		
-		//--------------------------------Step3 of Tender Flow-----------------------------------------------------------
+		//--------------------------------Step3 of Tender Flow (Volume & packaging)-----------------------------------------------------------
 		
-		//
+		//Click on Contract type------------------------------------------------------------------------------
+		@FindBy(how=How.ID,using="contract1")
+		WebElement clickOneoff;
 		
+		public void select_One_off_Contract_type()
+		{
+			clickOneoff.click();
+		}
+		
+		//Enter Volume & packaging for Lager------------------------------------------------------------------
+		@FindBy(how=How.ID,using="volume-lager-0")
+		WebElement entervolume;
+		
+		public void enter_volume_of_Lager(String volumelager)
+		{
+			entervolume.sendKeys(volumelager);
+		}
+		
+		//click Size of Lager------------------------------------------------------------------
+		@FindBy(how=How.ID,using="react-select-9--value")
+		WebElement sizedropdown;
+		
+		public void click_on_size_dropdown_Lager()
+		{
+			sizedropdown.click();
+		}
+		
+		//Select size of Langer--------------------------------------------------------------------------------
+		@FindBy(how=How.ID,using="size-lager-0")
+		WebElement selectsize;
+		
+		public void select_size_of_lager()
+		{
+			selectsize.click();
+		}
+		
+		//click Shape of Lager------------------------------------------------------------------
+		@FindBy(how=How.ID,using="react-select-10--value")
+		WebElement clickshape;
+		
+		public void click_shape_of_lager()
+		{
+			clickshape.click();
+		}
+		
+		//Select shape of Langer--------------------------------------------------------------------------------
+		@FindBy(how=How.ID,using="shape-lager-0")
+		WebElement selectshape;
+		
+		public void select_shape_of_lager()
+		{
+			selectshape.click();
+		}
+		
+		//click shelf life of Lager------------------------------------------------------------------
+		@FindBy(how=How.ID,using="react-select-12--value")
+		WebElement clickshelflife;
+				
+		public void click_shelflife_of_lager()
+		{
+			clickshelflife.click();
+		}
+				
+		//Select shelf life of Langer--------------------------------------------------------------------------------
+		@FindBy(how=How.ID,using="shape-lager-0")
+		WebElement selectshelflife;
+				
+		public void select_shelflife_of_lager()
+		{
+			selectshelflife.click();
+		}
 	
 	
 	

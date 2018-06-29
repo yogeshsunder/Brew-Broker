@@ -2,15 +2,26 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44518" started-at="2018-06-19T06:11:47Z" finished-at="2018-06-19T06:12:32Z">
+  <suite name="Default suite" duration-ms="61515" started-at="2018-06-29T06:19:36Z" finished-at="2018-06-29T06:20:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="44518" started-at="2018-06-19T06:11:47Z" finished-at="2018-06-19T06:12:32Z">
+    <test name="Default test" duration-ms="61515" started-at="2018-06-29T06:19:36Z" finished-at="2018-06-29T06:20:37Z">
       <class name="com.TestCases.VerifyLoginBuyer">
-        <test-method status="PASS" signature="main()[pri:0, instance:com.TestCases.VerifyLoginBuyer@ae45eb6]" name="main" duration-ms="44413" started-at="2018-06-19T11:41:47Z" finished-at="2018-06-19T11:42:32Z">
+        <test-method status="PASS" signature="main()[pri:0, instance:com.TestCases.VerifyLoginBuyer@1bce4f0a]" name="main" duration-ms="57579" started-at="2018-06-29T11:49:36Z" finished-at="2018-06-29T11:50:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- main -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.TestCases.VerifyLoginBuyer@1bce4f0a]" name="tearDown" is-config="true" duration-ms="3894" started-at="2018-06-29T11:50:33Z" finished-at="2018-06-29T11:50:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=main status=SUCCESS method=VerifyLoginBuyer.main()[pri:0, instance:com.TestCases.VerifyLoginBuyer@1bce4f0a] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.TestCases.VerifyLoginBuyer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

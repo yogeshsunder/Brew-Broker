@@ -10,7 +10,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.Pages.BuyerSignInPage;
-import com.Pages.SupplierSignupPage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;

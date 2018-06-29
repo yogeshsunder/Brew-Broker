@@ -2,27 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="109111" started-at="2018-05-31T13:33:47Z" finished-at="2018-05-31T13:35:36Z">
+  <suite name="Default suite" duration-ms="44518" started-at="2018-06-19T06:11:47Z" finished-at="2018-06-19T06:12:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="109111" started-at="2018-05-31T13:33:47Z" finished-at="2018-05-31T13:35:36Z">
-      <class name="com.TestCases.VerifySupplierProfileCreation">
-        <test-method status="PASS" signature="verifySupplierProfileCreation()[pri:0, instance:com.TestCases.VerifySupplierProfileCreation@1bce4f0a]" name="verifySupplierProfileCreation" duration-ms="108532" started-at="2018-05-31T19:03:47Z" finished-at="2018-05-31T19:05:35Z">
+    <test name="Default test" duration-ms="44518" started-at="2018-06-19T06:11:47Z" finished-at="2018-06-19T06:12:32Z">
+      <class name="com.TestCases.VerifyLoginBuyer">
+        <test-method status="PASS" signature="main()[pri:0, instance:com.TestCases.VerifyLoginBuyer@ae45eb6]" name="main" duration-ms="44413" started-at="2018-06-19T11:41:47Z" finished-at="2018-06-19T11:42:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySupplierProfileCreation -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.TestCases.VerifySupplierProfileCreation@1bce4f0a]" name="tearDown" is-config="true" duration-ms="550" started-at="2018-05-31T19:05:35Z" finished-at="2018-05-31T19:05:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifySupplierProfileCreation status=SUCCESS method=VerifySupplierProfileCreation.verifySupplierProfileCreation()[pri:0, instance:com.TestCases.VerifySupplierProfileCreation@1bce4f0a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.TestCases.VerifySupplierProfileCreation -->
+        </test-method> <!-- main -->
+      </class> <!-- com.TestCases.VerifyLoginBuyer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

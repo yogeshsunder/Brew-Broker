@@ -3,10 +3,14 @@
  */
 package com.Pages;
 
+import java.util.UUID;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Assert;
 
 /**
  * @author Yogesh
@@ -21,222 +25,548 @@ WebDriver driver;
 		this.driver=driver;
 	}
 	
-	//click on Tenders in Buyers Dashboard------------------------------------
-	@FindBy(how=How.CLASS_NAME,using="active tender")
-	WebElement tendersinDashboard;
+	@FindBy(how=How.XPATH,using="//div[@id='app']/div/div/div[2]/div/div[2]/div[2]/div/div/button") 
+	@CacheLookup
+	WebElement login;
 	
-	public void click_tenders_BuyersDashboard()
-	{
-		tendersinDashboard.click();
-	}
+	@FindBy(how=How.XPATH,using="//input[@name='loginemail']")
+	@CacheLookup
+	WebElement email;
 	
-	//click on New Tender link in Buyers Dashboard---------------------------------
-	@FindBy(how=How.XPATH,using="/html/body/div/div/div/div[2]/div/div[2]/div[1]/div/a")
+	@FindBy(how=How.XPATH,using="//input[@name='loginpassword']")
+	@CacheLookup
+	WebElement password;
+	
+	@FindBy(how=How.XPATH,using="/html/body/div[3]/div/div/div/div/div[4]/input")
+	@CacheLookup
+	WebElement loginbutton;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[1]/div/div[2]/div[2]/div/a/span")
+	@CacheLookup
+	WebElement brewbroker;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[1]/div/div[2]/div[2]/div/div/ul/li[3]/a")
+	@CacheLookup
+	WebElement dashboard;
+	
+	@FindBy(how=How.XPATH,using="//a[text()='new tender']")
+	@CacheLookup
 	WebElement newtender;
 	
-	public void click_on_NewTender()
-	{
-		newtender.click();
-	}
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/form/div[1]/div[3]/label/span")
+	@CacheLookup
+	WebElement bothbrewingpackaging;
 	
-	//--------------------------------Step1 of Tender Flow(Basic information)-----------------------------------------------------------
+	@FindBy(how=How.XPATH,using="//input[@id='title']")
+	@CacheLookup
+	WebElement nametender; 
 	
-	//Click on Both brewing & packaging services in services------------------------------
-	@FindBy(how=How.ID,using="service3")
-	WebElement clickservices;
-	
-	public void click_on_Services_Both()
-	{
-		clickservices.click();
-	}
-	
-	//Name/Title of the Tender-------------------------------------------------------------
-	@FindBy(how=How.ID,using="title")
-	WebElement name;
-	
-	public void enterName_of_tender(String nme)
-	{
-		name.sendKeys(nme);
-	}
-	
-	//Brief description of your tender-----------------------------------------------------
-	@FindBy(how=How.ID,using="desc")
+	@FindBy(how=How.XPATH,using="//textarea[@id='desc']")
+	@CacheLookup
 	WebElement description;
 	
-	public void enter_Description_of_tender(String dsc)
-	{
-		description.sendKeys(dsc);
-	}
+	@FindBy(how=How.XPATH,using="//*[@id=\"date-picker\"]/div/div/div/a")
+	@CacheLookup
+	WebElement dateto; 
 	
-	//Click Submit quote by-------------------------------------------------------------------
-	@FindBy(how=How.XPATH,using="/html/body/div/div/div/div[2]/div[1]/div[2]/div/form/div[3]/div/div/div/div/div/a")
-	WebElement Submitquoteby;
+	@FindBy(how=How.XPATH,using="/html/body/div[1]/div/div/div[2]/div[1]/div[2]/div/form/div[4]/div/div/div/div")
+	@CacheLookup
+	WebElement datefrom;
 	
-	public void click_Submit_quote_by()
-	{
-		Submitquoteby.click();
-	}
+	@FindBy(how=How.XPATH,using="//*[@id=\"date-picker\"]/div/div[2]/div/div[2]/div[2]/div[4]/div[5]")
+	@CacheLookup
+	WebElement date1;
 	
-	//Select Submit quote by date------------------------------------------------------
-	@FindBy(how=How.XPATH,using="/html/body/div/div/div/div[2]/div[1]/div[2]/div/form/div[3]/div/div/div/div[2]/div/div[2]/div[2]/div[5]/div[4]")
-	WebElement selectquoteby;
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/form/div[5]/div/input[2]")
+	@CacheLookup
+	WebElement next;
 	
-	public void select_quote_by_Date()
-	{
-		selectquoteby.click();
-	}
 	
-	//Click Deliver contract by-----------------------------------------------------------------
-	@FindBy(how=How.XPATH,using="/html/body/div/div/div/div[2]/div[1]/div[2]/div/form/div[4]/div/div/div/div/div/a")
-	WebElement clicktdeliverby;
+	@FindBy(how=How.XPATH,using="//*[@id=\"date-picker\"]/div/div[2]/div/div[2]/div[2]/div[5]/div[6]")
+	@CacheLookup
+	WebElement date2;   
 	
-	public void click_deliver_by()
-	{
-		clicktdeliverby.click();
-	}
+	@FindBy(how=How.XPATH,using="//input[@id='Brewingservices3']")
+	@CacheLookup
+	WebElement contractBrewing;
 	
-	//Select Deliver contract by--------------------------------------------------------------------
-	@FindBy(how=How.XPATH,using="/html/body/div/div/div/div[2]/div[1]/div[2]/div/form/div[4]/div/div/div/div[2]/div/div[2]/div[2]/div[5]/div[7]")
-	WebElement selectdeliverby;
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/div/div[1]/label/span")
+	@CacheLookup
+	WebElement ales;
 	
-	public void select_deliver_by_date()
-	{
-		selectdeliverby.click();
-	}
+	@FindBy(how=How.XPATH,using="//*[@id=\"1\"]")
+	@CacheLookup
+	WebElement alesABP; 
 	
-	//Click on Continue of Step 1 of Tender Flow-------------------------------------------------------------
-	@FindBy(how=How.XPATH,using="/html/body/div/div/div/div[2]/div[1]/div[2]/div/form/div[5]/div/input[2]")
-	WebElement continuestep1;
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/div/div[1]/div/div/label/span")
+	@CacheLookup
+	WebElement alesicanprovide;
 	
-	public void click_continue_step1()
-	{
-		continuestep1.click();
-	}
-	
-	//--------------------------------Step2 of Tender Flow(Brewing criteria)-----------------------------------------------------------
-	
-	//Click on Contract brewing from a recipe in Services----------------------------------------------
-	@FindBy(how=How.ID,using="Brewingservices1")
-	WebElement Contractbrewingfromarecipe;
-	
-	public void select_Contract_brewing_from_a_recipe()
-	{
-		Contractbrewingfromarecipe.click();
-	}
-	
-	//Click on Style Lager-----------------------------------------------------------------------------
-	@FindBy(how=How.ID,using="style2")
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/div/div[2]/label/span")
+	@CacheLookup
 	WebElement lager;
 	
-	public void click_on_Lager()
-	{
-		lager.click();
-	}
+	@FindBy(how=How.XPATH,using="//*[@id=\"2\"]")
+	@CacheLookup
+	WebElement lagerABP; 
 	
-	//Enter Desired Abv for Lager-----------------------------------------------------------------------
-	@FindBy(how=How.ID,using="2")
-	WebElement ABVlager;
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/div/div[2]/div/div/label/span")
+	@CacheLookup
+	WebElement lagericanprovide; 
 	
-	public void enter_ABV_for_Lager(String abvLager)
-	{
-		ABVlager.sendKeys(abvLager);
-	}
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[4]/input[2]")
+	@CacheLookup
+	WebElement formtwocontinue; 
 	
-	//Click on I can provide all or some of the ingredients----------------------------------------------
-	@FindBy(how=How.ID,using="ingredients2")
-	WebElement ingredientsLager;
+	@FindBy(how=How.XPATH,using="//input[@id='contract1']")
+	@CacheLookup
+	WebElement oneoff;
 	
-	public void select_ingredients_Lager()
-	{
-		ingredientsLager.click();
-	}
+	@FindBy(how=How.XPATH,using="//input[@id='volume-ales-0']")
+	@CacheLookup
+	WebElement volume;
 	
-	//Click on Continue of Step 2 of Tender Flow-------------------------------------------------------------
-		@FindBy(how=How.XPATH,using="/html/body/div/div/div/div[2]/div[1]/div[2]/div/div[4]/input[2]")
-		WebElement continuestep2;
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-3--value-item\"]")
+	@CacheLookup
+	WebElement container; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='react-select-3--option-1']")
+	@CacheLookup
+	WebElement containerbottle; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-4--value\"]")
+	@CacheLookup
+	WebElement size; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-4--option-3\"]")
+	@CacheLookup
+	WebElement size355; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-5--value\"]")
+	@CacheLookup
+	WebElement shape; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-5--option-2\"]")
+	@CacheLookup
+	WebElement shapeslim;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-6--value\"]")
+	@CacheLookup
+	WebElement color; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-6--option-1\"]")
+	@CacheLookup
+	WebElement colorblack; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-7--value\"]")
+	@CacheLookup
+	WebElement shelflife;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-7--option-2\"]")
+	@CacheLookup
+	WebElement shelflifeX;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-8--value\"]")
+	@CacheLookup
+	WebElement labelling;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-8--option-2\"]")
+	@CacheLookup
+	WebElement labellingX;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"volume-lager-0\"]")
+	@CacheLookup
+	WebElement volumelager;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-9--value-item\"]")
+	@CacheLookup
+	WebElement containerlager; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id='react-select-9--option-1']")
+	@CacheLookup
+	WebElement containerbottlelager; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-10--value\"]")
+	@CacheLookup
+	WebElement sizelager; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-10--option-3\"]")
+	@CacheLookup
+	WebElement size355lager; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-11--value\"]")
+	@CacheLookup
+	WebElement shapelager; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-11--option-2\"]")
+	@CacheLookup
+	WebElement shapeslimlager;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-12--value\"]")
+	@CacheLookup
+	WebElement colorlager; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-12--option-1\"]")
+	@CacheLookup
+	WebElement colorblacklager; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-13--value\"]")
+	@CacheLookup
+	WebElement shelflifelager;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-13--option-2\"]")
+	@CacheLookup
+	WebElement shelflifeXlager;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-14--value\"]")
+	@CacheLookup
+	WebElement labellinglager;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"react-select-14--option-2\"]")
+	@CacheLookup
+	WebElement labellingXlager;
+
+	@FindBy(how=How.XPATH,using="//*[@id=\"tender_volume\"]/form/div[2]/div/div[3]/label")
+	@CacheLookup
+	WebElement provideall; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"tender_volume\"]/form/div[3]/div/div[3]/label/span")
+	@CacheLookup
+	WebElement providealllager; 
 		
-		public void click_continue_step2()
-		{
-			continuestep2.click();
+	@FindBy(how=How.XPATH,using="//*[@id=\"tender_volume\"]/form/div[4]/input[2]")
+	@CacheLookup
+	WebElement continuethreestep; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[2]/div[1]/div/label")
+	@CacheLookup
+	WebElement duty; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/input[2]")
+	@CacheLookup
+	WebElement continuefourstep; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[2]/div[1]/div/label/span")
+	@CacheLookup
+	WebElement arrangecollection;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"PlacesAutocomplete__root\"]/input")
+	@CacheLookup
+	WebElement town; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[2]/div[3]/div[1]/label/span")
+	@CacheLookup
+	WebElement storage; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[2]/div[3]/div[2]/div[1]/div/label/span")
+	@CacheLookup
+	WebElement ambient;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[2]/div[3]/div[2]/div[3]/input")
+	@CacheLookup
+	WebElement duration; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/input[2]")
+	@CacheLookup
+	WebElement continuefivestep; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[2]/div[1]/label/span")
+	@CacheLookup
+	WebElement standardone; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[2]/div[2]/label/span")
+	@CacheLookup
+	WebElement standardtwo; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[2]/div[3]/label/span")
+	@CacheLookup
+	WebElement standardthree; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/div[1]/label/span")
+	@CacheLookup
+	WebElement qualione; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/div[2]/label/span")
+	@CacheLookup
+	WebElement qualitwo; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[3]/div[3]/label/span")
+	@CacheLookup
+	WebElement qualithree; 
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[4]/div/label/span")
+	@CacheLookup
+	WebElement communication;
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div[1]/div[2]/div/div[5]/input[2]")
+	@CacheLookup
+	WebElement continuesixstep;
+	
+	
+	@FindBy(how=How.XPATH,using="//*[@id=\"app\"]/div/div/div[2]/div/div[2]/div/div[2]/div[2]/input")
+	@CacheLookup
+	WebElement continuesevenstep; 
+
+		public  void login_brew(String emailid, String pass) {
+			Assert.assertTrue(email.isDisplayed());
+			email.sendKeys(emailid);
+			Assert.assertTrue(password.isDisplayed());
+			password.sendKeys(pass);
+			loginbutton.click();			
+		}
+
+		public void close_browser() {
+			driver.quit();
 		}
 		
-		//--------------------------------Step3 of Tender Flow (Volume & packaging)-----------------------------------------------------------
-		
-		//Click on Contract type------------------------------------------------------------------------------
-		@FindBy(how=How.ID,using="contract1")
-		WebElement clickOneoff;
-		
-		public void select_One_off_Contract_type()
-		{
-			clickOneoff.click();
+		public void newTender() {
+			Assert.assertTrue(newtender.isDisplayed());
+			newtender.click();
 		}
 		
-		//Enter Volume & packaging for Lager------------------------------------------------------------------
-		@FindBy(how=How.ID,using="volume-lager-0")
-		WebElement entervolume;
-		
-		public void enter_volume_of_Lager(String volumelager)
-		{
-			entervolume.sendKeys(volumelager);
-		}
-		
-		//click Size of Lager------------------------------------------------------------------
-		@FindBy(how=How.ID,using="react-select-9--value")
-		WebElement sizedropdown;
-		
-		public void click_on_size_dropdown_Lager()
-		{
-			sizedropdown.click();
-		}
-		
-		//Select size of Langer--------------------------------------------------------------------------------
-		@FindBy(how=How.ID,using="size-lager-0")
-		WebElement selectsize;
-		
-		public void select_size_of_lager()
-		{
-			selectsize.click();
-		}
-		
-		//click Shape of Lager------------------------------------------------------------------
-		@FindBy(how=How.ID,using="react-select-10--value")
-		WebElement clickshape;
-		
-		public void click_shape_of_lager()
-		{
-			clickshape.click();
-		}
-		
-		//Select shape of Langer--------------------------------------------------------------------------------
-		@FindBy(how=How.ID,using="shape-lager-0")
-		WebElement selectshape;
-		
-		public void select_shape_of_lager()
-		{
-			selectshape.click();
-		}
-		
-		//click shelf life of Lager------------------------------------------------------------------
-		@FindBy(how=How.ID,using="react-select-12--value")
-		WebElement clickshelflife;
-				
-		public void click_shelflife_of_lager()
-		{
-			clickshelflife.click();
-		}
-				
-		//Select shelf life of Langer--------------------------------------------------------------------------------
-		@FindBy(how=How.ID,using="shape-lager-0")
-		WebElement selectshelflife;
-				
-		public void select_shelflife_of_lager()
-		{
-			selectshelflife.click();
+		public void ServiceYouNeedBoth() {
+			Assert.assertTrue(bothbrewingpackaging.isDisplayed());
+			bothbrewingpackaging.click();
 		}
 	
+		public void brewbroker_logo() {
+			Assert.assertTrue(brewbroker.isDisplayed());
+			brewbroker.click();
+		}
 	
+		public void dashboard_link() {
+			Assert.assertTrue(dashboard.isDisplayed());
+			dashboard.click();
+		}
 	
-	
-	
+		public void login_link() {
+			Assert.assertTrue(login.isDisplayed());
+			login.click();
+		}
+
+		public void nameOfTender() {
+			Assert.assertTrue(nametender.isDisplayed());
+			String uuid = UUID.randomUUID().toString();	
+			nametender.sendKeys(uuid);
+		}				
+		
+		public void descriptionTender() {
+			Assert.assertTrue(description.isDisplayed());
+			description.sendKeys("Testing tender description. Testing tender description.");	
+		}
+		
+		public void submitQuoteBy() {
+			Assert.assertTrue(dateto.isDisplayed());
+			dateto.click();	
+			Assert.assertTrue(date1.isDisplayed());
+			date1.click();
+		}
+		
+		public void deliverContractBy() {
+			Assert.assertTrue(datefrom.isDisplayed());
+			datefrom.click();
+			Assert.assertTrue(date2.isDisplayed());
+			date2.click();
+		 
+		}
+		
+		public void nextForm() {
+			Assert.assertTrue(next.isDisplayed());
+			next.click();
+		}
+		
+		public void brewingServices() throws Exception {
+			contractBrewing.click();
+			Assert.assertTrue(contractBrewing.isEnabled()); Thread.sleep(4000);
+		}
+		
+		public void style_Ales() throws Exception {
+			Assert.assertTrue(ales.isDisplayed()); Thread.sleep(4000);
+			ales.click();	
+		}
+		
+		public void ales_ABP() throws Exception {
+			Assert.assertTrue(alesABP.isDisplayed()); Thread.sleep(4000);
+			alesABP.sendKeys("40");
+		}
+		
+		public void ales_icanprovide() throws Exception {
+			Assert.assertTrue(alesicanprovide.isDisplayed()); Thread.sleep(4000);
+			alesicanprovide.click();
+		}
+		
+		public void style_lager() {
+			Assert.assertTrue(lager.isDisplayed());
+			lager.click();	
+		}
+		
+		public void lager_ABP() {
+			Assert.assertTrue(lagerABP.isDisplayed());
+			lagerABP.sendKeys("40");
+		}
+		
+		public void lager_icanprovide() {
+			Assert.assertTrue(lagericanprovide.isDisplayed());
+			lagericanprovide.click();
+		}
+		
+		public void next_Form_two() {
+			Assert.assertTrue(formtwocontinue.isDisplayed());
+			formtwocontinue.click();
+		}
+		
+		public void contract_type() {
+			oneoff.click();
+			Assert.assertTrue(oneoff.isEnabled());
+		}
+		 public void volume_ales() {
+			 Assert.assertTrue(volume.isDisplayed());
+			 volume.sendKeys("40000");
+		 }
+		 
+		public void container_type() throws Exception {
+			Assert.assertTrue(container.isDisplayed());
+			container.click();
+			containerbottle.click();	
+		}
+		
+		public void size_type() {
+			Assert.assertTrue(size.isDisplayed());
+			size.click();
+			size355.click();
+		}
+		
+		public void shape_type() {
+			Assert.assertTrue(shape.isDisplayed());
+			shape.click();
+			shapeslim.click();
+		}
+		
+		public void shelflife_type() {
+			Assert.assertTrue(shelflife.isDisplayed());
+			shelflife.click();
+			shelflifeX.click();
+			
+		}
+		public void color_type() throws Exception {
+			Assert.assertTrue(color.isDisplayed());
+			color.click();
+			colorblack.click();
+		}
+		
+		public void labelling_type() {
+			Assert.assertTrue(labelling.isDisplayed());
+			labelling.click();
+			labellingX.click();
+		}
+		
+		public void volume_lager() {
+			 Assert.assertTrue(volume.isDisplayed());
+			 volumelager.sendKeys("40000");
+		 }
+		 
+		public void container_typelager() throws Exception {
+			Assert.assertTrue(container.isDisplayed());
+			containerlager.click();
+			containerbottlelager.click();	
+		}
+		
+		public void size_typelager() {
+			Assert.assertTrue(size.isDisplayed());
+			sizelager.click();
+			size355lager.click();
+		}
+		
+		public void shape_typelager() {
+			Assert.assertTrue(shape.isDisplayed());
+			shapelager.click();
+			shapeslimlager.click();
+		}
+		
+		public void shelflife_typelager() {
+			Assert.assertTrue(shelflife.isDisplayed());
+			shelflifelager.click();
+			shelflifeXlager.click();
+			
+		}
+		public void color_typelager() throws Exception {
+			Assert.assertTrue(color.isDisplayed());
+			colorlager.click();
+			colorblacklager.click();
+		}
+		
+		public void labelling_typelager() {
+			Assert.assertTrue(labelling.isDisplayed());
+			labellinglager.click();
+			labellingXlager.click();
+		}
+		
+		public void duty() {
+			duty.click();
+		}
+		
+		public void duty_continue() {
+			continuefourstep.click();
+		}
+		
+		public void arrange_collection() {
+			arrangecollection.click();
+		}
+		
+		public void storage_click() {
+			storage.click();		
+		}
+		
+		public void ambient_click() {	
+			ambient.click();
+		}
+		
+		public void duration_click() {	
+			duration.click();
+			duration.sendKeys("10 days");
+		}
+		
+		public void stepfive_sontinue() {
+			continuefivestep.click();
+		}
+		
+		public void standards() {
+			standardone.click();
+			standardtwo.click();
+			standardthree.click();
+		}
+		
+		public void qualifications(){
+			qualione.click();
+			qualitwo.click();
+			qualithree.click();
+		}
+		
+		public void communication() {
+			communication.click();
+		}
+		
+		public void continue_step_seven() {	
+			continuesevenstep.click();
+		}
+
+
+		public void stepsix_continue() {
+			continuesixstep.click();
+		}
+
+
+		public void continue_step_three() {
+			continuethreestep.click();
+			
+		}
+
+		public void tickales() {
+			provideall.click();	
+		}
+
+		public void ticklager() {
+			providealllager.click();
+		}
 
 }

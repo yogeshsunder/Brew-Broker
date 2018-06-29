@@ -1,28 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="61515" started-at="2018-06-29T06:19:36Z" finished-at="2018-06-29T06:20:37Z">
+  <suite name="Default suite" duration-ms="104224" started-at="2018-06-29T13:57:10Z" finished-at="2018-06-29T13:58:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="61515" started-at="2018-06-29T06:19:36Z" finished-at="2018-06-29T06:20:37Z">
-      <class name="com.TestCases.VerifyLoginBuyer">
-        <test-method status="PASS" signature="main()[pri:0, instance:com.TestCases.VerifyLoginBuyer@1bce4f0a]" name="main" duration-ms="57579" started-at="2018-06-29T11:49:36Z" finished-at="2018-06-29T11:50:33Z">
+    <test name="Default test" duration-ms="104224" started-at="2018-06-29T13:57:10Z" finished-at="2018-06-29T13:58:55Z">
+      <class name="com.TestCases.VerifyCreateTenderfromBuyer">
+        <test-method status="FAIL" signature="createTenderbyBuyer()[pri:0, instance:com.TestCases.VerifyCreateTenderfromBuyer@1bce4f0a]" name="createTenderbyBuyer" duration-ms="102818" started-at="2018-06-29T19:27:10Z" finished-at="2018-06-29T19:28:53Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: Element <input type="checkbox" id="matched42" name="supplier" value="on"> is not clickable at point (930, 549). Other element would receive the click: <div class="selectSupplierCountPanel">...</div>
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 91 milliseconds
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-QHJCD6D', ip: '192.168.0.63', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7), userDataDir=C:\Users\ucreate\AppData\Local\Temp\scoped_dir4756_11317}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a0cc22291e5c2d2e62edc263cba69d25]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: Element <input type="checkbox" id="matched42" name="supplier" value="on"> is not clickable at point (930, 549). Other element would receive the click: <div class="selectSupplierCountPanel">...</div>
+  (Session info: chrome=67.0.3396.99)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 91 milliseconds
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-QHJCD6D', ip: '192.168.0.63', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7), userDataDir=C:\Users\ucreate\AppData\Local\Temp\scoped_dir4756_11317}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=67.0.3396.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: a0cc22291e5c2d2e62edc263cba69d25
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:215)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:167)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:671)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at sun.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy6.click(Unknown Source)
+	at com.Pages.CreateTenderfromBuyerPage.selectMoorhouseBrewery(CreateTenderfromBuyerPage.java:565)
+	at com.TestCases.VerifyCreateTenderfromBuyer.createTenderbyBuyer(VerifyCreateTenderfromBuyer.java:146)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- main -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.TestCases.VerifyLoginBuyer@1bce4f0a]" name="tearDown" is-config="true" duration-ms="3894" started-at="2018-06-29T11:50:33Z" finished-at="2018-06-29T11:50:37Z">
+        </test-method> <!-- createTenderbyBuyer -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.TestCases.VerifyCreateTenderfromBuyer@1bce4f0a]" name="tearDown" is-config="true" duration-ms="1322" started-at="2018-06-29T19:28:53Z" finished-at="2018-06-29T19:28:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=main status=SUCCESS method=VerifyLoginBuyer.main()[pri:0, instance:com.TestCases.VerifyLoginBuyer@1bce4f0a] output={null}]]]>
+                <![CDATA[[TestResult name=createTenderbyBuyer status=FAILURE method=VerifyCreateTenderfromBuyer.createTenderbyBuyer()[pri:0, instance:com.TestCases.VerifyCreateTenderfromBuyer@1bce4f0a] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.TestCases.VerifyLoginBuyer -->
+      </class> <!-- com.TestCases.VerifyCreateTenderfromBuyer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

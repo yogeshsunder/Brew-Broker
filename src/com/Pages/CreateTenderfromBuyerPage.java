@@ -549,7 +549,7 @@ WebDriver driver;
 		continuesevenstep.click();
 	}
 	
-	/*=================================Step Seven=========================================================================*/
+	/*=================================Step Eight=========================================================================*/
 	@FindBy(how=How.CLASS_NAME,using="suuplierstext")
 	WebElement text;
 	public void clicktext()
@@ -558,7 +558,7 @@ WebDriver driver;
 	}
 	
 	
-	@FindBy(how=How.XPATH,using="//*[@id=\"matched42\"]")
+	@FindBy(how=How.NAME,using="supplier")
 	WebElement MoorhouseBrewery;
 	public void selectMoorhouseBrewery()
 	{

@@ -143,10 +143,10 @@ public class VerifyCreateTenderfromBuyer
 		/*================================================Step Eight=====================================================*/	
 		tender.clicktext();Thread.sleep(5000);
 		
-		tender.selectMoorhouseBrewery();Thread.sleep(3000);
+		//tender.selectMoorhouseBrewery();Thread.sleep(3000);
 		tender.selectCreateBrwery();Thread.sleep(3000);
-		tender.selectBhopstuff();Thread.sleep(1000);
-		tender.submitTender();
+		//tender.selectBhopstuff();Thread.sleep(1000);
+		//tender.submitTender();
 		
 		
 	}
